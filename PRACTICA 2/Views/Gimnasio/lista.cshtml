@@ -1,0 +1,15 @@
+@model List<Gimnasio>
+<h1>Lista de ciudades registradas</h1>
+
+@if (Model.Count == 0) {
+    <div class="alert alert-warning text-center">Aún no hay ciudades.</div>
+} else {
+    <ol>
+    @foreach (var p in Model) {
+        <li class="d-flex">
+            <div> @p.Nombre</div>
+            <div>@p.Lider</div>
+        </li>
+    }
+    </ol>
+}
